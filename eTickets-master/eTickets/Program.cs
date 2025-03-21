@@ -1,11 +1,9 @@
+using eTickets.Services.VNPay;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace eTickets
 {
@@ -13,7 +11,10 @@ namespace eTickets
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var host = CreateHostBuilder(args).Build();
+
+            // Ch?y ?ng d?ng
+            host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

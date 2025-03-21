@@ -1,7 +1,8 @@
-using eTickets.Data;
+﻿using eTickets.Data;
 using eTickets.Data.Cart;
 using eTickets.Data.Services;
 using eTickets.Models;
+using eTickets.Services;
 using eTickets.Services.VNPay;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
@@ -60,6 +61,8 @@ namespace eTickets
             });
 
             services.AddControllersWithViews();
+            // Đăng ký EmailService
+            services.AddSingleton<EmailService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

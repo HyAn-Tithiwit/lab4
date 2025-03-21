@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore.Storage.ValueConversion.Internal;
-
-namespace eTickets.Models.VNPay
+﻿namespace eTickets.Models.VNPay
 {
     public class PaymentResponseModel
     {
